@@ -5,15 +5,16 @@
 - [1. Package dependencies](#1-package-dependencies)
 - [2. Commands](#2-commands)
 
-## 1. Package dependencies
+# 1. Package dependencies
 
 - dotnet add package Microsoft.EntityFrameworkCore
 - dotnet add package Microsoft.EntityFrameworkCore.Sqlite (For SQLite)
 - dotnet add package Microsoft.EntityFrameworkCore.SqlServer (For SqlServer)
-- dotnet add package Microsoft.EntityFrameworkCore.Tools
 - dotnet add package Pomelo.EntityFrameworkCore.MySql (For MySql)
+- dotnet add package Microsoft.EntityFrameworkCore.Tools
 
-## 2. Commands
+# 2. Commands
+
 - Install globally dotnet ef into machine
   - dotnet tool install --global dotnet-ef
   - dotnet tool install --global dotnet-ef --version 6.X.X
@@ -22,8 +23,8 @@
   - dotnet tool install --global dotnet-ef
 - Add migration into the project
   - dotnet ef migrations add `<name_migrations>` –o `<output_path>`
-  - dotnet ef migrations add `<name_migrations>` -p `<project_name>` -s `<name_solution>` -o `<output_path>` # Ex: dotnet ef migrations add InitialCreate -p Infrastructure -s API 
--o Data/Migrations
+  - dotnet ef migrations add `<name_migrations>` -p `<project_name>` -s `<name_solution>` -o `<output_path>` # Ex: dotnet ef migrations add InitialCreate -p Infrastructure -s API
+    -o Data/Migrations
 - Create or update database with migrations
   - dotnet ef database update
   - dotnet ef database update -p `<project_name>` -s `<name_solution>` # Ex: dotnet ef database update -p Infrastructure -s API
